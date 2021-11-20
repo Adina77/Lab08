@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Manipuation</title>
+</head>
+
+<body style= "background-color: rgb(190, 190, 243); color:rgb(35, 35, 105)">
+    <br>
+    <br>
+    <p id ="dummy" style="border-style: solid">
+        This is a dummy paragraph but it is not dummy text. It is brilliant text.
+    Make it more brilliant by giving it some style. You have control!</p>
+
+    <h2 >Border:</h2>
+    <p>Red value (0-255): <input type="text" id="borderRed"></p>
+    <p>Green value (0-255): <input type="text" id="borderGreen"></p>
+    <p>Blue value (0-255): <input type="text" id="borderBlue"><br></p>
+    <p>Width (2-50): <input type="text" id="bwidth"><br></p>
+
+    <h2> Background: </h2>
+    <p> Red value (0-255): <input type="text" id="bgRed"></p>
+    <p> Green value (0-255): <input type="text" id="bgGreen"></p>
+    <p> Blue value (0-255): <input type="text" id="bgBlue"></p>
+    
+    <center>
+    <button onclick="colorSwap()">Change Colors</button>
+    </center>
+
+    <script>
+        function colorSwap() {
+
+            var borderRed = document.getElementById("borderRed").value;
+            var borderGreen = document.getElementById("borderGreen").value;
+            var borderBlue = document.getElementById("borderBlue").value;
+            var borderWidth = document.getElementById("bwidth").value;
+
+            var bgRed = document.getElementById("bgRed").value;
+            var bgGreen = document.getElementById("bgGreen").value;
+            var bgBlue = document.getElementById("bgBlue").value;
+
+            var dummyPar = document.getElementById("dummy");
+
+            dummyPar.style.borderColor = "rgb(" + borderRed + ", " + borderGreen + ", " + borderBlue + ")";
+            dummyPar.style.borderWidth = borderWidth + "px";
+            dummyPar.style.backgroundColor = "rgb(" + bgRed + ", " + bgGreen + ", " + bgBlue + ")";
+
+        }
+    </script>
+</body>
+</html>
