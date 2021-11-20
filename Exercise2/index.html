@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Slide Show</title>
+</head>
+
+<body>
+    <div class="display">
+    <img src="cake.jpg" id="slide1" width='575' height='575'>
+    <img src="RubyMatFirst.jpg" id="slide2" width='575' height='575'>
+    <img src="Modeling2.jpg" id="slide3" width='575' height='575'>
+    <img src="Modeling1.jpg" id="slide4" width='575' height='575'>
+    <img src="OlgaOkuneva.jpg" id="slide5" width='575' height='575'>
+
+    <br>
+
+    <button type='button' id="prev" onclick="previous()">Previous</button>
+    <button type='button' id="next" onclick="next()">Next</button>
+    </div>
+
+    <script>
+        var pictures = ["slide1", "slide2", "slide3", "slide4", "slide5"]
+
+        var index = 0;
+        function previous() {
+            if (index == 0){
+                index = 4;
+                getPicture(index);
+            }
+            else {
+                index -= 1;
+                getPicture(index);
+            }       
+        }
+
+        function next() {
+            if (index == 4) {
+                index = 0;
+                getPicture(index);
+            }
+            else {
+                index += 1;
+                getPicture(index);
+            }
+        }
+
+        function getPicture(index) {
+             picture = document.getElementById(pictures[index]).src;
+             display.picture;
+        }
+
+    </script>
+</body>
+
+</html>
